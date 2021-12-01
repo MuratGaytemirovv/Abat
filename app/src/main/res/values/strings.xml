@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Abat</string>
+    <string name="start">Let\'s go!</string>
+    <string name="descriptionOfLogo">This is our app\'s logo</string>
+    <string name="heading_about">A few words about Abat…</string>
+    <string name="text_purpose_of_app">Dear kids and their parents, \n\nWe are glad to present you our app. The purpose of this app is to help little kids to learn the alphabet of Chechen language.</string>
+    <string name="text_in_form_of_game">From our experience, we know that kids remember new information when it is given in a form of a game.\nBecause of this we have made this app as a game. Children will learn the alphabet in a way of game and will have fun during the process.</string>
+    <string name="text_rules_of_game">So how to play? It is very simple. First thing that you need to do is go to the page with all letters and study them. After that you can start the game.</string>
+    <string name="have_a_nice_journey">Have a nice journey!</string>
+    <string name="a_part_of_a_logo_of_abat">A part of a logo of abat</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about">ABOUT</string>
+    <string name="quiz">quiz</string>
+    <string name="more_apps">MORE APPS</string>
+    <string name="text_more_apps">By the way, there are also another apps to improve your chechen language. If you want to explore them, click on the button below :)</string>
+    <string name="abat">ABAT</string>
+    <string name="alphabet">ALPHABET</string>
+    <string name="home">HOME</string>
+    <string name="begins_with"><![CDATA[begins with —>]]></string>
+    <string name="begins_with_negative"><![CDATA[no word that begins with —>]]></string>
+    <string name="words">WORDS</string>
+</resources>

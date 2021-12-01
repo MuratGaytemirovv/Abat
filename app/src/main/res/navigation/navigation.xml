@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    android:label="@string/abat"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.weeprogram.abat.screens.main.MainFragment"
+        android:label="@string/abat">
+        <action
+            android:id="@+id/action_mainFragment_to_alphabetFragment"
+            app:destination="@id/alphabetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/alphabetFragment"
+        android:name="com.weeprogram.abat.screens.alphabet.AlphabetFragment"
+        android:label="@string/alphabet" />
+    <activity
+        android:id="@+id/aboutAppActivity"
+        android:name="com.weeprogram.abat.AboutAppActivity"
+        android:label="@string/about"
+        tools:layout="@layout/fragment_about" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.weeprogram.abat.MainActivity"
+        android:label="MainActivity"
+        tools:layout="@layout/fragment_main"/>
+    <fragment
+        android:id="@+id/wordFragment"
+        android:name="com.weeprogram.abat.screens.words.WordFragment"
+        android:label="@string/words"
+        tools:layout="@layout/fragment_word" />
+</navigation>
