@@ -6,19 +6,19 @@ import androidx.lifecycle.ViewModel
 
 class AboutViewModel: ViewModel() {
 
-    private val _navigateToMoreApps = MutableLiveData<Boolean>()
+    private val _navigateToMoreAboutLanguage = MutableLiveData<Boolean>()
     val navigateToAlphabet : LiveData<Boolean>
-        get() {return _navigateToMoreApps}
+        get() {return _navigateToMoreAboutLanguage}
 
     init {
-        _navigateToMoreApps.value = false
+        _navigateToMoreAboutLanguage.value = false
     }
 
-    fun btnNavigateToMoreAppsClicked() {
-        _navigateToMoreApps.value = true
+    fun btnNavigateToMoreAboutLanguageClicked() {
+        _navigateToMoreAboutLanguage.value = true
     }
 
-    fun navigateToMoreAppsFinished() {
-        _navigateToMoreApps.value = false
+    fun navigateToMoreAboutLanguageFinished() {
+        _navigateToMoreAboutLanguage.value = false
     }
 }

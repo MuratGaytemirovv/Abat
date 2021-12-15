@@ -16,32 +16,42 @@ class WordViewModel(
     val database = dataSource
     val words = database.getAllWords()
 
+    var idWord = MutableLiveData<Int>()
 
 
-    private suspend fun insert(word: Word) {
-        database.insert(word)
+    private var _showAlertDialog = MutableLiveData<Boolean?>()
+
+    val showAlertDialog: LiveData<Boolean?>
+        get() = _showAlertDialog
+
+    init {
+        _showAlertDialog.value = false
+        idWord.value = 0
+        viewModelScope.launch {
+            val oldWord = getWordFromDatabase(2)
+            print(oldWord)
+        }
     }
+
+
+
 
     private suspend fun update(word: Word) {
         database.update(word)
     }
 
-    private suspend fun clear() {
-        database.clear()
+    fun onWordClicked(id: Int) {
+        _showAlertDialog.value = true
+        idWord.value = id
     }
 
-    private suspend fun delete(word: Word) {
-        database.delete(word)
-    }
-
-    fun onWordClicked(id: Int, newWord: String) {
+    fun onClickOk(newWord: String) {
         viewModelScope.launch {
-            val oldWord = getWordFromDatabase(id)
+            val oldWord = getWordFromDatabase(idWord.value!!)
             if (oldWord != null) {
                 oldWord.word = newWord
                 update(oldWord)
             }
-
         }
     }
 

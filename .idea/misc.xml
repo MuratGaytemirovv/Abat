@@ -5,11 +5,14 @@
       <map>
         <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/drawable-v24/about.xml" value="0.14351851851851852" />
         <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/drawable-v24/quiz.xml" value="0.14351851851851852" />
+        <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/drawable/ic_connection_error.xml" value="0.13148148148148148" />
         <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1361111111111111" />
+        <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/drawable/loading_img.xml" value="0.13148148148148148" />
         <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/layout/activity_about_app.xml" value="0.25416666666666665" />
         <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/layout/fragment_about.xml" value="0.264" />
         <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/layout/fragment_alphabet.xml" value="0.1265625" />
         <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/layout/fragment_main.xml" value="0.13020833333333334" />
+        <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/layout/fragment_more_about_language.xml" value="0.15625" />
         <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/layout/fragment_more_apps.xml" value="0.1265625" />
         <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/layout/fragment_word.xml" value="0.25416666666666665" />
         <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/layout/letter_item.xml" value="0.176" />

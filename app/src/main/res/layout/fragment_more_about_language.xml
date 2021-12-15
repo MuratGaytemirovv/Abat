@@ -1,0 +1,68 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.weeprogram.abat.screens.webservice.MoreAboutLanguageViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80FEFFCB"
+        android:orientation="vertical"
+        tools:context="com.weeprogram.abat.AboutAppActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80FEFFCB">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#80FEFFCB"
+                android:orientation="vertical"
+                tools:context="com.weeprogram.abat.AboutAppActivity">
+
+                <TextView
+                    android:id="@+id/heading_about_language"
+                    style="@style/heading_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="50dp"
+                    android:text="@string/heading_about_language"
+                    android:textColor="#d9346d"
+                    android:textSize="30sp"
+                    app:textHidden="@{viewModel.status}" />
+
+                <ImageView
+                    android:id="@+id/status_image"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="100dp"
+                    app:languageApiStatus="@{viewModel.status}" />
+
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="#FEFFCB"
+                    android:text="@{viewModel.response}"
+                    android:textAppearance="@style/style1"
+                    app:changeColor="@{viewModel.status}"/>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+</layout>

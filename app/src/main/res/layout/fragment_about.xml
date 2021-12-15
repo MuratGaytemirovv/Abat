@@ -1,8 +1,9 @@
-<layout xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="aboutViewModel"
             type="com.weeprogram.abat.screens.about.AboutViewModel" />
@@ -16,14 +17,6 @@
         tools:context=".MainActivity">
 
 
-
-        <TextView
-            android:id="@+id/heading_about"
-            style="@style/heading_style"
-            android:text="@string/heading_about"
-            android:textColor="#d9346d"
-            android:textSize="30sp" />
-
         <ScrollView
             android:id="@+id/about_scroll"
             android:layout_width="match_parent"
@@ -35,37 +28,41 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/heading_about"
+                    style="@style/heading_style"
+                    android:text="@string/heading_about"
+                    android:textColor="#d9346d"
+                    android:textSize="30sp" />
+
+
+                <TextView
                     android:id="@+id/text_purpose"
                     style="@style/style1"
                     android:layout_marginTop="15dp"
                     android:paddingStart="5dp"
                     android:paddingEnd="5dp"
-                    android:text="@string/text_purpose_of_app"
-                     />
+                    android:text="@string/text_purpose_of_app" />
 
                 <TextView
                     android:id="@+id/text_game"
                     style="@style/style2"
                     android:paddingStart="5dp"
                     android:paddingEnd="5dp"
-                    android:text="@string/text_in_form_of_game"
-                     />
+                    android:text="@string/text_in_form_of_game" />
 
                 <TextView
                     android:id="@+id/text_rule"
                     style="@style/style1"
                     android:paddingStart="5dp"
                     android:paddingEnd="5dp"
-                    android:text="@string/text_rules_of_game"
-                    />
+                    android:text="@string/text_rules_of_game" />
 
                 <TextView
                     android:id="@+id/text_journey"
                     style="@style/style2"
                     android:paddingStart="5dp"
                     android:paddingEnd="5dp"
-                    android:text="@string/have_a_nice_journey"
-                     />
+                    android:text="@string/have_a_nice_journey" />
 
                 <TextView
                     android:id="@+id/textView"
@@ -83,8 +80,8 @@
                     android:layout_marginTop="@dimen/vertical_margin"
                     android:backgroundTint="#d9346d"
                     android:fontFamily="@font/baloo"
-                    android:text="@string/more_apps"
-                    android:onClick="@{() -> aboutViewModel.btnNavigateToMoreAppsClicked()}"
+                    android:onClick="@{() -> aboutViewModel.btnNavigateToMoreAboutLanguageClicked()}"
+                    android:text="@string/more_info"
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -92,7 +89,7 @@
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:typeface="normal"
-                    tools:text="@string/more_apps" />
+                    tools:text="@string/more_info" />
 
             </LinearLayout>
         </ScrollView>

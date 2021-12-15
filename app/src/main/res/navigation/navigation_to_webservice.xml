@@ -11,14 +11,14 @@
         android:label="@string/about"
         tools:layout="@layout/fragment_about">
         <action
-            android:id="@+id/action_aboutFragment_to_moreAppsFragment"
-            app:destination="@id/moreAppsFragment" />
+            android:id="@+id/action_aboutFragment_to_moreAboutLanguageFragment"
+            app:destination="@id/moreAboutLanguageFragment" />
     </fragment>
     <fragment
-        android:id="@+id/moreAppsFragment"
-        android:name="com.weeprogram.abat.screens.webservice.MoreAppsFragment"
+        android:id="@+id/moreAboutLanguageFragment"
+        android:name="com.weeprogram.abat.screens.webservice.MoreAboutLanguageFragment"
         android:label="@string/more_apps"
-        tools:layout="@layout/fragment_more_apps" />
+        tools:layout="@layout/fragment_more_about_language" />
     <activity
         android:id="@+id/mainActivity"
         android:name="com.weeprogram.abat.MainActivity"

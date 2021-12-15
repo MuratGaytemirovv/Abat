@@ -58,34 +58,43 @@ class WordFragment : Fragment() {
 
         val adapter = WordAdapter(WordListener {
 
-           val builder =  AlertDialog.Builder(context)
-            builder.setTitle("Please fill in your word..")
-            val input = EditText(context)
-
-            input.inputType = InputType.TYPE_CLASS_TEXT
-            builder.setView(input)
-
-            val newWord = input.text.toString()
-
-
-
-            builder.setPositiveButton("OK",
-                DialogInterface.OnClickListener { dialog, which -> wordViewModel.onWordClicked(it,newWord) })
-            builder.setNegativeButton("Cancel",
-                DialogInterface.OnClickListener { dialog, which -> dialog.cancel() })
-
-            builder.show()
-
-
+            wordViewModel.onWordClicked(it)
         })
 
         binding.recycleViewWords.adapter = adapter
+
+
 
         wordViewModel.words.observe(viewLifecycleOwner, Observer {
             it?.let {
                 adapter.submitList(it)
             }
 
+        })
+
+        wordViewModel.showAlertDialog.observe(viewLifecycleOwner, Observer {
+            if(it == true) {
+                val builder =  AlertDialog.Builder(context)
+                builder.setTitle("Please fill in your word..")
+
+
+                val input = EditText(context)
+
+                input.inputType = InputType.TYPE_CLASS_TEXT
+                builder.setView(input)
+
+                val newWord = input.text.toString()
+
+
+
+                builder.setPositiveButton("OK",
+                    DialogInterface.OnClickListener { dialog, which -> wordViewModel.onClickOk(newWord) })
+                builder.setNegativeButton("Cancel",
+                    DialogInterface.OnClickListener { dialog, which -> dialog.cancel() })
+
+                builder.show()
+
+            }
         })
         binding.lifecycleOwner = this
 

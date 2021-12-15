@@ -35,7 +35,7 @@ class AboutFragment : Fragment() {
 
         aboutViewModel.navigateToAlphabet.observe(viewLifecycleOwner, androidx.lifecycle.Observer {
             if (it) {
-                navigateToMoreApps()
+                navigateToMoreAboutLanguage()
             }
         })
 
@@ -47,9 +47,9 @@ class AboutFragment : Fragment() {
     }
 
 
-    private fun navigateToMoreApps(){
-        requireView().findNavController().navigate(AboutFragmentDirections.actionAboutFragmentToMoreAppsFragment())
-        aboutViewModel.navigateToMoreAppsFinished()
+    private fun navigateToMoreAboutLanguage(){
+        requireView().findNavController().navigate(AboutFragmentDirections.actionAboutFragmentToMoreAboutLanguageFragment())
+        aboutViewModel.navigateToMoreAboutLanguageFinished()
     }
 
 
