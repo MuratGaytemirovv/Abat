@@ -22,7 +22,6 @@ interface WordDAO {
     fun getAllWords(): LiveData<List<Word>>
 
 
-
     @Query("DELETE FROM words")
     suspend fun clear()
 }

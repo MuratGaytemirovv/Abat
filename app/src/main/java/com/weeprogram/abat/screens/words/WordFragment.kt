@@ -25,25 +25,22 @@ import android.text.InputType
 import android.widget.EditText
 
 
-
-
-
-
-
-
 class WordFragment : Fragment() {
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         val binding: FragmentWordBinding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_word, container, false)
+            inflater, R.layout.fragment_word, container, false
+        )
 
         val snackbar: Snackbar = Snackbar
-            .make(binding.recycleViewWords, "If you would like to use your own words, press and hold the box that contains a word..", Snackbar.LENGTH_INDEFINITE)
+            .make(
+                binding.recycleViewWords,
+                "If you would like to use your own words, press the box that contains a word..",
+                Snackbar.LENGTH_INDEFINITE
+            )
 
         snackbar.show()
 
@@ -53,7 +50,8 @@ class WordFragment : Fragment() {
 
         val wordViewModel =
             ViewModelProvider(
-                this, viewModelFactory).get(WordViewModel::class.java)
+                this, viewModelFactory
+            ).get(WordViewModel::class.java)
         binding.wordViewModel = wordViewModel
 
         val adapter = WordAdapter(WordListener {
@@ -73,32 +71,26 @@ class WordFragment : Fragment() {
         })
 
         wordViewModel.showAlertDialog.observe(viewLifecycleOwner, Observer {
-            if(it == true) {
-                val builder =  AlertDialog.Builder(context)
+            if (it == true) {
+                val builder = AlertDialog.Builder(context)
                 builder.setTitle("Please fill in your word..")
 
 
                 val input = EditText(context)
-
                 input.inputType = InputType.TYPE_CLASS_TEXT
+
                 builder.setView(input)
-
-                val newWord = input.text.toString()
-
-
-
                 builder.setPositiveButton("OK",
-                    DialogInterface.OnClickListener { dialog, which -> wordViewModel.onClickOk(newWord) })
+                    DialogInterface.OnClickListener() { dialog, which ->
+                        val newWord = input.text.toString()
+                        wordViewModel.onClickOk(newWord)
+                    })
                 builder.setNegativeButton("Cancel",
                     DialogInterface.OnClickListener { dialog, which -> dialog.cancel() })
-
                 builder.show()
-
             }
         })
         binding.lifecycleOwner = this
-
-
 
         return binding.root
     }

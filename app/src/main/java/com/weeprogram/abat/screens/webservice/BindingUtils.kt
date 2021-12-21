@@ -11,8 +11,10 @@ import androidx.databinding.BindingAdapter
 import com.weeprogram.abat.R
 
 @BindingAdapter("languageApiStatus")
-fun bindStatus(statusImageView: ImageView,
-               status: LanguageApiStatus?) {
+fun bindStatus(
+    statusImageView: ImageView,
+    status: LanguageApiStatus?
+) {
 
     when (status) {
         LanguageApiStatus.LOADING -> {

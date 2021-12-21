@@ -14,8 +14,9 @@
         android:layout_height="match_parent"
         android:background="#FEFFCB"
         android:orientation="vertical"
-        tools:context=".MainActivity">
-
+        tools:context=".MainActivity"
+        android:layoutAnimation="@anim/layout_animation"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <ScrollView
             android:id="@+id/about_scroll"
@@ -90,9 +91,7 @@
                     android:textStyle="bold"
                     android:typeface="normal"
                     tools:text="@string/more_info" />
-
             </LinearLayout>
         </ScrollView>
-
     </LinearLayout>
 </layout>

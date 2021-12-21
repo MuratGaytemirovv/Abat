@@ -3,7 +3,7 @@ package com.weeprogram.abat.database
 import androidx.room.Embedded
 import androidx.room.Relation
 
-data class AlphabetAndWord (
+data class AlphabetAndWord(
     @Embedded val alphabet: Alphabet,
     @Relation(
         parentColumn = "letterId",
@@ -13,5 +13,5 @@ data class AlphabetAndWord (
     val word: Word
 
 
-    )
+)
 

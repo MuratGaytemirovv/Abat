@@ -5,18 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="letter"
-            type="com.weeprogram.abat.database.Alphabet"/>
+            type="com.weeprogram.abat.database.Alphabet" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#80FEFFCB"
-
-        >
-
+        android:background="#80FEFFCB">
         <TextView
             android:layout_width="200dp"
             android:layout_height="wrap_content"
@@ -34,8 +32,5 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:letterFromAlphabet="@{letter}" />
-
-
-
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

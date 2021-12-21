@@ -21,13 +21,17 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val binding = DataBindingUtil.inflate<FragmentMainBinding>(inflater,
-            R.layout.fragment_main,container,false)
+        val binding = DataBindingUtil.inflate<FragmentMainBinding>(
+            inflater,
+            R.layout.fragment_main, container, false
+        )
         mainViewModelFactory = MainViewModelFactory()
-        mainViewModel  = ViewModelProviders.of(this, mainViewModelFactory).get(MainViewModel::class.java)
+        mainViewModel =
+            ViewModelProviders.of(this, mainViewModelFactory).get(MainViewModel::class.java)
 
         binding.mainViewModel = mainViewModel
 
+        binding.btnStart.focusable = View.NOT_FOCUSABLE
         mainViewModel.navigateToAlphabet.observe(viewLifecycleOwner, androidx.lifecycle.Observer {
             if (it) {
                 navigateToAlphabet()
@@ -50,19 +54,20 @@ class MainFragment : Fragment() {
     }
 
 
-    private fun navigateToAlphabet(){
-        requireView().findNavController().navigate(MainFragmentDirections.actionMainFragmentToAlphabetFragment())
+    private fun navigateToAlphabet() {
+        requireView().findNavController()
+            .navigate(MainFragmentDirections.actionMainFragmentToAlphabetFragment())
         mainViewModel.navigateToAlphabetFinished()
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
-        inflater.inflate(R.menu.options_menu,menu)
+        inflater.inflate(R.menu.options_menu, menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return NavigationUI.onNavDestinationSelected(item,requireView().findNavController())
-                ||super.onOptionsItemSelected(item)
+        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
+                || super.onOptionsItemSelected(item)
     }
 }
 

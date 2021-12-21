@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 
 
 @Database(entities = [Alphabet::class, Word::class], version = 1, exportSchema = false)
-abstract class AbatDatabase: RoomDatabase() {
+abstract class AbatDatabase : RoomDatabase() {
     abstract val alphabetDAO: AlphabetDAO
     abstract val wordDAO: WordDAO
 
@@ -24,9 +24,9 @@ abstract class AbatDatabase: RoomDatabase() {
                     instance = Room.databaseBuilder(
                         context.applicationContext,
                         AbatDatabase::class.java,
-                        "abat_database")
-
-                        .fallbackToDestructiveMigration()
+                        "abat_database"
+                    )
+                        //.fallbackToDestructiveMigration()
                         .createFromAsset("database/abat_database.db")
                         .build()
                     INSTANCE = instance

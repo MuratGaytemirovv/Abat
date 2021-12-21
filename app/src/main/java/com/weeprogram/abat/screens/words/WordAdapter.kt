@@ -9,7 +9,8 @@ import com.weeprogram.abat.R
 import com.weeprogram.abat.database.Word
 import com.weeprogram.abat.databinding.WordItemBinding
 
-class WordAdapter(val clickListener: WordListener) : ListAdapter<Word, WordAdapter.ViewHolder>(WordDiffCallback()) {
+class WordAdapter(val clickListener: WordListener) :
+    ListAdapter<Word, WordAdapter.ViewHolder>(WordDiffCallback()) {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = getItem(position)
@@ -18,11 +19,12 @@ class WordAdapter(val clickListener: WordListener) : ListAdapter<Word, WordAdapt
 
     }
 
-   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder.from(parent)
     }
 
-    class ViewHolder private constructor(val binding: WordItemBinding) : RecyclerView.ViewHolder(binding.root){
+    class ViewHolder private constructor(val binding: WordItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: Word, clickListener: WordListener) {
             binding.word = item

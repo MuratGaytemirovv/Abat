@@ -12,14 +12,15 @@ import android.view.animation.RotateAnimation
 import androidx.interpolator.view.animation.FastOutLinearInInterpolator
 import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 
-
+// Als de id van de letter even is past men paarse kleur toe, in andere geval lichtblauw
 @BindingAdapter("letterFromAlphabet")
 fun TextView.setTextColor(item: Alphabet) {
-    setTextColor(if (isEvenOrZero(item)) {
-        resources.getColor(customColor)
-    } else {
-        resources.getColor(R.color.customColor2)
-    }
+    setTextColor(
+        if (isEvenOrZero(item)) {
+            resources.getColor(customColor)
+        } else {
+            resources.getColor(R.color.customColor2)
+        }
     )
 }
 

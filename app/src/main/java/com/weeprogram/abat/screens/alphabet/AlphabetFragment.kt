@@ -22,29 +22,26 @@ import kotlinx.android.synthetic.main.fragment_alphabet.*
 
 class AlphabetFragment : Fragment() {
 
-    private lateinit var mediaPlayer: MediaPlayer
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+
         val binding: FragmentAlphabetBinding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_alphabet, container, false)
+            inflater, R.layout.fragment_alphabet, container, false
+        )
 
         val application = requireNotNull(this.activity).application
-
-
         val dataSource = AbatDatabase.getInstance(application).alphabetDAO
         val viewModelFactory = AlphabetViewModelFactory(dataSource, application)
-
         val alphabetViewModel =
             ViewModelProvider(
-                this, viewModelFactory).get(AlphabetViewModel::class.java)
+                this, viewModelFactory
+            ).get(AlphabetViewModel::class.java)
 
         binding.alphabetViewModel = alphabetViewModel
 
         val adapter = AlphabetAdapter()
-
 
         binding.recycleViewAlphabet.adapter = adapter
 

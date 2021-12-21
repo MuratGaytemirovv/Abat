@@ -13,8 +13,10 @@ import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 import com.weeprogram.abat.R
 import com.weeprogram.abat.database.Alphabet
 
-class AlphabetViewModel(dataSource: AlphabetDAO,
-                        application: Application): ViewModel() {
+class AlphabetViewModel(
+    dataSource: AlphabetDAO,
+    application: Application
+) : ViewModel() {
     val database = dataSource
     val letters = database.getAllLetters()
 

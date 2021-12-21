@@ -11,30 +11,23 @@ import kotlinx.coroutines.launch
 
 class WordViewModel(
     dataSource: WordDAO,
-    application: Application) : ViewModel() {
+    application: Application
+) : ViewModel() {
 
     val database = dataSource
     val words = database.getAllWords()
-
     var idWord = MutableLiveData<Int>()
 
 
     private var _showAlertDialog = MutableLiveData<Boolean?>()
-
     val showAlertDialog: LiveData<Boolean?>
         get() = _showAlertDialog
 
     init {
         _showAlertDialog.value = false
         idWord.value = 0
-        viewModelScope.launch {
-            val oldWord = getWordFromDatabase(2)
-            print(oldWord)
-        }
+
     }
-
-
-
 
     private suspend fun update(word: Word) {
         database.update(word)

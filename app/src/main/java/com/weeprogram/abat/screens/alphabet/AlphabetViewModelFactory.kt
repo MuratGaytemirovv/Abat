@@ -5,8 +5,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.weeprogram.abat.database.AlphabetDAO
 
-class AlphabetViewModelFactory(private val dataSource: AlphabetDAO,
-                               private val application: Application
+class AlphabetViewModelFactory(
+    private val dataSource: AlphabetDAO,
+    private val application: Application
 ) : ViewModelProvider.Factory {
     @Suppress("unchecked_cast")
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {

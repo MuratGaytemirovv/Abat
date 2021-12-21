@@ -25,30 +25,30 @@ class AboutFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        val binding = DataBindingUtil.inflate<FragmentAboutBinding>(inflater,
-            R.layout.fragment_about,container,false)
+        val binding = DataBindingUtil.inflate<FragmentAboutBinding>(
+            inflater,
+            R.layout.fragment_about, container, false
+        )
 
         aboutViewModelFactory = AboutViewModelFactory()
-        aboutViewModel  = ViewModelProviders.of(this, aboutViewModelFactory).get(AboutViewModel::class.java)
+        aboutViewModel =
+            ViewModelProviders.of(this, aboutViewModelFactory).get(AboutViewModel::class.java)
 
         binding.aboutViewModel = aboutViewModel
 
-        aboutViewModel.navigateToAlphabet.observe(viewLifecycleOwner, androidx.lifecycle.Observer {
+        aboutViewModel.navigateToMoreAboutLanguage.observe(viewLifecycleOwner, androidx.lifecycle.Observer {
             if (it) {
                 navigateToMoreAboutLanguage()
             }
         })
 
-
-
-
         return binding.root
 
     }
 
-
-    private fun navigateToMoreAboutLanguage(){
-        requireView().findNavController().navigate(AboutFragmentDirections.actionAboutFragmentToMoreAboutLanguageFragment())
+    private fun navigateToMoreAboutLanguage() {
+        requireView().findNavController()
+            .navigate(AboutFragmentDirections.actionAboutFragmentToMoreAboutLanguageFragment())
         aboutViewModel.navigateToMoreAboutLanguageFinished()
     }
 

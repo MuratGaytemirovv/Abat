@@ -13,7 +13,7 @@ import com.weeprogram.abat.databinding.FragmentMoreAboutLanguageBinding
 
 class MoreAboutLanguageFragment : Fragment() {
 
-    private val viewModel:MoreAboutLanguageViewModel  by lazy {
+    private val viewModel: MoreAboutLanguageViewModel by lazy {
         ViewModelProvider(this).get(MoreAboutLanguageViewModel::class.java)
     }
 

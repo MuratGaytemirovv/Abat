@@ -4,72 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="word"
-            type="com.weeprogram.abat.database.Word"/>
+            type="com.weeprogram.abat.database.Word" />
+
         <variable
             name="clickListener"
             type="com.weeprogram.abat.screens.words.WordListener" />
     </data>
-<androidx.cardview.widget.CardView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginEnd="8dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginTop="8dp"
-    >
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:background="#FEFFCB"
-        tools:ignore="ExtraText"
-        android:onClick="@{() -> clickListener.onClick(word)}">
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp">
 
-        <TextView
-            android:id="@+id/beginletter"
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:textColor="@color/customColor"
-            android:fontFamily="@font/lobster"
-            android:textSize="30sp"
             android:background="#FEFFCB"
-            android:text="@{word.word.charAt(1) == 'I' || word.word.charAt(1) == 'ь' || word.word.charAt(1) == 'х' || word.word.charAt(1) == 'ъ' ? word.word.substring(0,2) : word.word.substring(0,1)}"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            />
+            android:onClick="@{() -> clickListener.onClick(word)}"
+            android:padding="8dp"
+            tools:ignore="ExtraText">
+
+            <TextView
+                android:id="@+id/beginletter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="#FEFFCB"
+                android:fontFamily="@font/lobster"
+                android:text="@{word.word.charAt(1) == 'I' || word.word.charAt(1) == 'ь' || word.word.charAt(1) == 'х' || word.word.charAt(1) == 'ъ' ? word.word.substring(0,2) : word.word.substring(0,1)}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/customColor"
+                android:textSize="30sp" />
 
 
+            <TextView
+                android:id="@+id/word_from_database"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/beginletter"
+                android:background="#FEFFCB"
+                android:ellipsize="end"
+                android:fontFamily="@font/lobster"
+                android:maxLines="1"
+                android:text="@{word.word}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/customColor2"
+                android:textSize="30sp" />
 
-        <TextView
-            android:id="@+id/word_from_database"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/customColor2"
-            android:fontFamily="@font/lobster"
-            android:textSize="30sp"
-            android:background="#FEFFCB"
-            android:text="@{word.word}"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:maxLines="1"
-            android:layout_toStartOf="@id/beginletter"
-            android:layout_alignParentStart="true"
-            android:ellipsize="end"/>
-
-        <TextView
-            android:id="@+id/text_begins_with"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/customColor"
-            android:fontFamily="@font/lobster"
-            android:background="#FEFFCB"
-            android:textSize="15sp"
-            android:layout_below="@id/word_from_database"
-            android:text="@{word.word.charAt(0) == 'Щ' || word.word.charAt(0) == 'ь' || word.word.charAt(0) == 'ъ' ? @string/begins_with_negative : @string/begins_with}"/>
+            <TextView
+                android:id="@+id/text_begins_with"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/word_from_database"
+                android:background="#FEFFCB"
+                android:fontFamily="@font/lobster"
+                android:text="@{word.word.charAt(0) == 'Щ' || word.word.charAt(0) == 'ь' || word.word.charAt(0) == 'ъ' ? @string/begins_with_negative : @string/begins_with}"
+                android:textColor="@color/customColor"
+                android:textSize="15sp" />
 
 
-    </RelativeLayout>
+        </RelativeLayout>
 
-</androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
 </layout>

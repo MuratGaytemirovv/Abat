@@ -4,10 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/drawable-v24/about.xml" value="0.14351851851851852" />
+        <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.12314814814814815" />
+        <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/drawable-v24/nav_header.xml" value="0.12314814814814815" />
         <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/drawable-v24/quiz.xml" value="0.14351851851851852" />
+        <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/drawable/alphabet.xml" value="0.1259259259259259" />
+        <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/drawable/home.xml" value="0.12314814814814815" />
         <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/drawable/ic_connection_error.xml" value="0.13148148148148148" />
         <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1361111111111111" />
+        <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/drawable/list_of_words.xml" value="0.12314814814814815" />
         <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/drawable/loading_img.xml" value="0.13148148148148148" />
+        <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/font/akronim.xml" value="0.12314814814814815" />
+        <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/font/audiowide.xml" value="0.12314814814814815" />
         <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/layout/activity_about_app.xml" value="0.25416666666666665" />
         <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/layout/fragment_about.xml" value="0.264" />
         <entry key="..\:/VIVES/Jaar 3/Semester 1/AndroidDevelopment/summatieve opdracht/Abat/app/src/main/res/layout/fragment_alphabet.xml" value="0.1265625" />

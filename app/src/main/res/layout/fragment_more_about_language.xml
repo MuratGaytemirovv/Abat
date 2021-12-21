@@ -14,7 +14,9 @@
         android:layout_height="match_parent"
         android:background="#80FEFFCB"
         android:orientation="vertical"
-        tools:context="com.weeprogram.abat.AboutAppActivity">
+        tools:context="com.weeprogram.abat.AboutAppActivity"
+        android:layoutAnimation="@anim/layout_animation"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -47,7 +49,6 @@
                     android:layout_marginTop="100dp"
                     app:languageApiStatus="@{viewModel.status}" />
 
-
                 <TextView
                     android:id="@+id/description"
                     android:layout_width="match_parent"
@@ -57,12 +58,8 @@
                     android:background="#FEFFCB"
                     android:text="@{viewModel.response}"
                     android:textAppearance="@style/style1"
-                    app:changeColor="@{viewModel.status}"/>
-
-
+                    app:changeColor="@{viewModel.status}" />
             </LinearLayout>
         </ScrollView>
-
-
     </LinearLayout>
 </layout>

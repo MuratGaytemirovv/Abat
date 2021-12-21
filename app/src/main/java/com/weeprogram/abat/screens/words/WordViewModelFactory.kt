@@ -7,8 +7,9 @@ import com.weeprogram.abat.database.AlphabetDAO
 import com.weeprogram.abat.database.WordDAO
 import com.weeprogram.abat.screens.alphabet.AlphabetViewModel
 
-class WordViewModelFactory(private val dataSource: WordDAO,
-                           private val application: Application
+class WordViewModelFactory(
+    private val dataSource: WordDAO,
+    private val application: Application
 ) : ViewModelProvider.Factory {
     @Suppress("unchecked_cast")
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
