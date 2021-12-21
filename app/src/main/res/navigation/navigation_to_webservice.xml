@@ -37,6 +37,6 @@
     <fragment
         android:id="@+id/alphabetFragment"
         android:name="com.weeprogram.abat.screens.alphabet.AlphabetFragment"
-        android:label="AlphabetFragment"
-        tools:layout="@layout/fragment_alphabet"/>
+        android:label="@string/alphabet"
+        tools:layout="@layout/fragment_alphabet" />
 </navigation>
